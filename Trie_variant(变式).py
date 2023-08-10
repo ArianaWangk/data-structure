@@ -12,7 +12,7 @@ class WordDictionary:
         self.root = TrieNode()
 
     def addWord(self, word: str) -> None:
-        cur = self.root
+        cur = self.root  #或者直接写cur=self 也是可以的
         for c in word:
             if c not in cur.children:
                 cur.children[c] = TrieNode()
